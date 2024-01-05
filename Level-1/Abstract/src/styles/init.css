@@ -1,0 +1,302 @@
+/* Apply isolation property to root and next elements */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+/* Set box-sizing to border-box and adjust font size */
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /* equivalent to 10px */
+	tab-size: 4;
+	word-break: break-all;
+	overflow: hidden auto;
+}
+
+/* Reset default styles for all elements */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+*::before,
+*::after {
+	text-decoration: inherit;
+	vertical-align: inherit;
+}
+
+/* Reduce motion for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-delay: -1ms !important;
+		animation-duration: 1ms !important;
+		animation-iteration-count: 1 !important;
+		background-attachment: initial !important;
+		scroll-behavior: auto !important;
+		transition-delay: 0s !important;
+		transition-duration: 0s !important;
+	}
+}
+
+/* Set base styles for the body */
+body {
+	min-height: 100dvh;
+	line-height: 1.5;
+	scroll-behavior: smooth;
+	overscroll-behavior: none;
+	text-rendering: optimizeSpeed;
+	font-size: 1.6rem; /* equivalent to 16px */
+	font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+		'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Adjust line height for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.2;
+}
+
+/* Enable word wrapping for paragraphs and limit the width */
+p {
+	overflow-wrap: break-word;
+	max-width: 40ch;
+}
+
+/* Remove default list styles */
+li {
+	list-style-type: none;
+}
+
+/* Set border-collapse for tables */
+table {
+	border-collapse: collapse;
+}
+
+/* Enable vertical resizing for textareas */
+textarea {
+	resize: vertical;
+}
+
+/* Set vertical alignment for audio, canvas, iframe, img, svg, and video elements */
+audio,
+canvas,
+iframe,
+svg,
+video {
+	vertical-align: middle;
+}
+
+/* Remove borders for buttons and fieldsets */
+button,
+fieldset {
+	border: 0;
+}
+
+/* Configure touch actions for various elements */
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+}
+
+/* Set opacity and disable pointer events for disabled buttons */
+button:disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+/* Set cursor as progress for elements marked as busy */
+[aria-busy='true'] {
+	cursor: progress;
+}
+
+/* Set initial values for all properties and configure page breaks for links */
+a {
+	all: initial;
+	break-inside: avoid;
+	break-before: avoid-column;
+	break-after: always;
+}
+
+/* Apply outline style on active and hovered links */
+a:active,
+a:hover {
+	outline: 0.1rem solid;
+}
+
+/* Display links as blocks if they contain images directly */
+a:has(> img) {
+	display: block;
+}
+
+/* Skip text-decoration for links without a class */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Add content before empty links with href starting with 'http' */
+a[href^='http']:empty::before {
+	content: attr(href);
+}
+
+/* Set cursor as pointer for links and buttons */
+a,
+button {
+	cursor: pointer;
+}
+
+/* Remove box shadow and add outline for focused elements */
+/* Sets outline color to black with 2-pixel solid line and adjusts outline offset */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	box-shadow: none;
+	outline: #000 solid 2px;
+	outline-offset: 0.05em;
+}
+
+/* Adjust height and max width for specific elements */
+/* Sets height to auto and limits maximum width to 100% */
+iframe,
+input,
+select,
+textarea {
+	height: auto;
+	max-width: 100%;
+}
+
+/* Remove outline for non-visible focused elements */
+:focus:not(:focus-visible) {
+	outline: 0;
+}
+
+/* Add background color when a form element or its descendant is focused */
+form:focus-within {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* Show elements that are not hidden based on attributes */
+/* Displays elements that have aria-hidden=false and hidden attribute */
+[aria-hidden='false'][hidden] {
+	display: initial;
+}
+
+/* Clip and position elements that are not focused and not visible */
+[aria-hidden='false'][hidden]:not(:focus) {
+	clip: rect(0, 0, 0, 0);
+	position: absolute;
+}
+
+/* Revert styles for checkboxes and radios */
+/* Resets all styles for checkboxes and radios to default */
+[type='checkbox'],
+[type='radio'] {
+	all: revert;
+}
+
+/* Remove border for color and range input types */
+[type='color'],
+[type='range'] {
+	border-width: 0;
+}
+
+/* Set cursor style for number input type */
+[type='number'] {
+	cursor: text;
+}
+
+/* Change appearance style for search input type */
+[type='search'] {
+	-webkit-appearance: textfield;
+	appearance: textfield;
+}
+
+/* Apply border-radius to radio input type */
+[type='radio'] {
+	border-radius: 50%;
+}
+
+/* Set the font family for pre, code, kbd, samp elements */
+pre,
+code,
+kbd,
+samp {
+	font-family: Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono,
+		Oxygen Mono, Liberation Mono, monospace;
+}
+
+/* Set the fill color for SVG elements without fill attribute */
+svg:not([fill]) {
+	fill: currentColor;
+}
+
+/* Set properties for images */
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	font-style: italic;
+	background-repeat: no-repeat;
+	background-size: cover;
+	shape-margin: 0.75rem;
+}
+
+/* Display message for broken images before the image */
+img:before {
+	content: "We're sorry, the image below is broken :(";
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* Display the image URL after the image */
+img:after {
+	content: '(url: ' attr(src) ')';
+	display: block;
+	font-size: 12px;
+}
+
+/* Set common properties for input, button, textarea, select elements */
+input,
+button,
+textarea,
+select {
+	background-color: transparent;
+	border: 1px solid WindowFrame;
+	color: inherit;
+	font: inherit;
+	letter-spacing: inherit;
+	padding: 0.25em 0.375em;
+}
+
+/* If you have SVG icon-only buttons for sighted users and the SVG fails to load, this will help maintain accessibility. */
+.icon-only::after {
+	content: attr(aria-label);
+}
+
+/* Hide videos that have autoplay enabled and are not muted */
+video[autoplay]:not([muted]),
+/* Hide line breaks that are immediately followed by another line break */
+br + br {
+	display: none;
+}

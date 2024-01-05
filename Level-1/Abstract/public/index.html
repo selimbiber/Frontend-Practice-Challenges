@@ -16,7 +16,7 @@
 	<body>
 		<header class="header-section">
 			<div class="header-section__top-container container row">
-				<nav class="header-section__nav">
+				<nav class="header-section__nav row">
 					<a
 						class="header-section__link"
 						title="Go to goabstract.com"
@@ -63,9 +63,8 @@
 					<a class="header-section__link" title="Home" href="#">Help Center</a>
 				</nav>
 				<form
-					action="/submit"
 					method="post"
-					class="header-section__action-form"
+					class="header-section__action-form row is-hidden"
 					id="user-action-form">
 					<button
 						type="submit"
@@ -80,7 +79,7 @@
 						Sign in
 					</button>
 				</form>
-				<div class="header-section__buttons-container is-hidden">
+				<div class="header-section__buttons-container row">
 					<button
 						type="button"
 						class="header-section__search-btn btn"
@@ -97,9 +96,8 @@
 					</div>
 				</div>
 				<form
-					action="submit"
 					method="post"
-					class="header-section__search-form is-hidden"
+					class="header-section__search-form row is-hidden"
 					id="user-search-form">
 					<input
 						type="search"
@@ -116,7 +114,6 @@
 			</div>
 			<div class="header-section__sub-container col is-hidden">
 				<form
-					action="submit"
 					method="post"
 					class="header-section__action-form"
 					id="user-action-form">
@@ -140,7 +137,6 @@
 				<div class="searching-subsection__container container col">
 					<h1>How can we help?</h1>
 					<form
-						action="submit"
 						method="get"
 						class="searching-subsection__query-form"
 						id="help-query-form">
@@ -289,7 +285,7 @@
 			<button type="button" class="help-btn btn">Help</button>
 			<section
 				aria-label="helper chat bot"
-				class="chatbot-subsection is-hidden">
+				class="chatbot-subsection col is-hidden">
 				<header class="chatbot-subsection__header-part">
 					<h3 class="chatbot-subsection__title">Abstract</h3>
 					<button
@@ -299,7 +295,7 @@
 						-
 					</button>
 				</header>
-				<div class="chatbot-subsection__dialog-panel">
+				<div class="chatbot-subsection__dialog-panel col">
 					<svg
 						width="246px"
 						height="246px"
@@ -319,7 +315,7 @@
 							</g>
 						</g>
 					</svg>
-					<article class="chatbot-subsection__dialog-content">
+					<article class="chatbot-subsection__dialog-content col">
 						<h4 class="chatbot-subsection__bot-title">Abstract · Bot</h4>
 						<p class="chatbot-subsection__bot-message">
 							Hi! Welcome to Abstract.
@@ -328,7 +324,7 @@
 							Ask me a question and I'll find the answer for you.
 						</p>
 					</article>
-					<footer class="chatbot-subsection__footer-part">
+					<footer class="chatbot-subsection__footer-part col">
 						<button class="touch-btn btn">Get in touch</button>
 						<textarea
 							name="user-message"
@@ -341,8 +337,8 @@
 		</main>
 		<footer class="footer-section">
 			<div class="footer-section__container container">
-				<div class="lists-part row">
-					<ul class="lists-part__info-list">
+				<div class="lists-part">
+					<ul class="lists-part__info-list col">
 						<li><h3 class="lists-part__title">Abstract</h3></li>
 						<li>
 							<a
@@ -366,7 +362,7 @@
 							>
 						</li>
 					</ul>
-					<ul class="lists-part__info-list">
+					<ul class="lists-part__info-list col">
 						<li><h3 class="lists-part__title">Resources</h3></li>
 						<li>
 							<a href="https://www.abstract.com/blog" class="lists-part__link"
@@ -391,7 +387,7 @@
 							>
 						</li>
 					</ul>
-					<ul class="lists-part__info-list">
+					<ul class="lists-part__info-list col">
 						<li><h3 class="lists-part__title">Community</h3></li>
 						<li>
 							<a href="https://twitter.com/goabstract" class="lists-part__link"
@@ -423,7 +419,7 @@
 							>
 						</li>
 					</ul>
-					<ul class="lists-part__info-list">
+					<ul class="lists-part__info-list col">
 						<li><h3 class="lists-part__title">Company</h3></li>
 						<li>
 							<a href="https://www.abstract.com/about" class="lists-part__link"
@@ -441,7 +437,7 @@
 							>
 						</li>
 					</ul>
-					<ul class="lists-part__info-list">
+					<ul class="lists-part__info-list col">
 						<li>
 							<h4 class="lists-part__title--sub">Contact Us</h4>
 						</li>

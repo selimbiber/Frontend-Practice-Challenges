@@ -1,0 +1,27 @@
+@import './init.css';
+
+$black-color: hsl(0, 0%, 0%);
+$lilac-color: hsl(237, 45%, 90%);
+$purple-color: hsl(232, 62%, 57%);
+
+.container {
+	max-width: 1200px;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn {
+	cursor: pointer;
+}
+
+.is-hidden {
+	display: none;
+}

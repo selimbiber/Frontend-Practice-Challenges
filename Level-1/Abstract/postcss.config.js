@@ -1,12 +1,11 @@
 module.exports = {
 	plugins: [
-		require('postcss-extend-rule'),
-		require('postcss-url'),
-		require('autoprefixer'),
-		require('postcss-preset-env'),
 		require('postcss-nested'),
+		require('autoprefixer'),
+		require('postcss-import'),
 		require('postcss-mixins'),
-		require('postcss-normalize'),
-		require('cssnano'),
+		require('postcss-url'),
+		require('postcss-preset-env')({ stage: 1 }),
+		require('cssnano')({ preset: 'default' }),
 	],
 };
