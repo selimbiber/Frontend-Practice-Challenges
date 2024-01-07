@@ -1,8 +1,11 @@
 @import './init.css';
 
-$black-color: hsl(0, 0%, 0%);
-$lilac-color: hsl(237, 45%, 90%);
-$purple-color: hsl(232, 62%, 57%);
+:root {
+	--black-color: hsl(0, 0%, 0%);
+	--lilac-color: hsl(237, 45%, 90%);
+	--purple-color: hsl(232, 62%, 57%);
+	--animation-curve: cubic-bezier(1, 0, 0, 1);
+}
 
 .container {
 	max-width: 1200px;
@@ -24,4 +27,141 @@ $purple-color: hsl(232, 62%, 57%);
 
 .is-hidden {
 	display: none;
+}
+.header-section {
+	background-color: var(--black-color);
+	padding: 0.7rem;
+	&__top-container {
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__nav {
+		align-items: center;
+		column-gap: 1rem;
+	}
+
+	&__logo {
+		height: 1.8rem;
+		color: white;
+		transition: color 0.2s;
+
+		.abstract-logo-mark,
+		.abstract-logo-wordmark {
+			cursor: pointer;
+		}
+
+		&:hover {
+			color: lightgray;
+		}
+	}
+
+	&__link {
+		color: white;
+		font-size: 1.4rem;
+		position: relative;
+
+		&:before {
+			content: '|';
+			position: absolute;
+			left: -0.7rem;
+			bottom: 0;
+			font-size: 1.8rem;
+			font-weight: bold;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	&__buttons-container {
+		align-items: center;
+		column-gap: 0.3rem;
+		padding-right: 2rem;
+	}
+
+	&__search-btn {
+		img {
+			height: 1.5rem;
+			transition: transform 0.2s;
+
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__action-form {
+	}
+
+	&__toggle-btn {
+		& label {
+			width: 2rem;
+			height: 0.3rem;
+			background-color: white;
+			position: absolute;
+			cursor: pointer;
+
+			&::before,
+			&::after {
+				content: '';
+				width: 2rem;
+				background-color: transparent;
+				position: absolute;
+				display: block;
+				color: white;
+				transition: all 0.2s var(--animation-curve);
+			}
+			&::before {
+				top: -250%;
+				left: 0%;
+				height: 0.7rem;
+				border-top: 0.3rem solid white;
+				transform: rotateZ(0deg);
+				transform-origin: left top;
+			}
+			&::after {
+				bottom: -250%;
+				left: 0%;
+				height: 0.7rem;
+				border-bottom: 0.3rem solid white;
+				transform: rotateZ(0deg);
+				transform-origin: left bottom;
+			}
+		}
+	}
+
+	&__checkbox-input {
+		display: none;
+
+		& ~ label {
+			transition: all 0.2s var(--animation-curve);
+		}
+
+		&:checked ~ label {
+			background-color: transparent;
+
+			&::before,
+			&::after {
+				content: '';
+				border: none;
+				height: 0.2rem;
+				background-color: white;
+				left: 10%;
+			}
+
+			&::before {
+				transform: rotateZ(57deg);
+			}
+
+			&::after {
+				transform: rotateZ(-57deg);
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	/* Hamburger Menu */
 }

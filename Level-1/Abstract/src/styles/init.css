@@ -1,5 +1,4 @@
-/* Apply isolation property to root and next elements */
-#root,
+Apply isolation property to root and next elements #root,
 #__next {
 	isolation: isolate;
 }
@@ -135,12 +134,6 @@ a {
 	break-inside: avoid;
 	break-before: avoid-column;
 	break-after: always;
-}
-
-/* Apply outline style on active and hovered links */
-a:active,
-a:hover {
-	outline: 0.1rem solid;
 }
 
 /* Display links as blocks if they contain images directly */
