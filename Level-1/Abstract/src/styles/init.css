@@ -184,11 +184,6 @@ textarea {
 	outline: 0;
 }
 
-/* Add background color when a form element or its descendant is focused */
-form:focus-within {
-	background: rgba(0, 0, 0, 0.3);
-}
-
 /* Show elements that are not hidden based on attributes */
 /* Displays elements that have aria-hidden=false and hidden attribute */
 [aria-hidden='false'][hidden] {

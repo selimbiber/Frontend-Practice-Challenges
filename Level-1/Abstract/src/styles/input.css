@@ -1,7 +1,6 @@
 @import './init.css';
 
 :root {
-	--black-color: hsl(0, 0%, 0%);
 	--lilac-color: hsl(237, 45%, 90%);
 	--purple-color: hsl(232, 62%, 57%);
 	--animation-curve: cubic-bezier(1, 0, 0, 1);
@@ -16,7 +15,7 @@
 	flex-direction: row;
 }
 
-.column {
+.col {
 	display: flex;
 	flex-direction: column;
 }
@@ -29,46 +28,52 @@
 	display: none;
 }
 .header-section {
-	background-color: var(--black-color);
-	padding: 0.7rem;
+	position: relative;
+	justify-content: center;
+
+	&--bg-black {
+		background-color: black;
+	}
+
+	&--bg-white {
+		background-color: white;
+	}
+
 	&__top-container {
+		padding: 2rem 0.5rem;
 		justify-content: space-between;
-		align-items: center;
+		width: 100%;
+		margin: 0 auto;
 	}
 
 	&__nav {
 		align-items: center;
-		column-gap: 1rem;
 	}
 
 	&__logo {
-		height: 1.8rem;
+		height: 3.2rem;
 		color: white;
 		transition: color 0.2s;
-
-		.abstract-logo-mark,
-		.abstract-logo-wordmark {
-			cursor: pointer;
-		}
 
 		&:hover {
 			color: lightgray;
 		}
 	}
 
+	&__vertical-line {
+		color: white;
+		padding-left: 1rem;
+		padding-bottom: 0.5rem;
+		font-size: 2.8rem;
+		cursor: default;
+	}
+
 	&__link {
 		color: white;
-		font-size: 1.4rem;
+		font-size: 2.3rem;
 		position: relative;
-
-		&:before {
-			content: '|';
-			position: absolute;
-			left: -0.7rem;
-			bottom: 0;
-			font-size: 1.8rem;
-			font-weight: bold;
-		}
+		padding-left: 1rem;
+		font-family: sans-serif;
 
 		&:hover {
 			text-decoration: underline;
@@ -77,28 +82,26 @@
 
 	&__buttons-container {
 		align-items: center;
-		column-gap: 0.3rem;
-		padding-right: 2rem;
+		column-gap: 0.5rem;
+		padding-right: 3.3rem;
 	}
 
 	&__search-btn {
 		img {
-			height: 1.5rem;
+			height: 2.5rem;
 			transition: transform 0.2s;
 
 			&:hover {
-				transform: scale(1.1);
+				transform: scale(1.2);
 			}
 		}
 	}
 
-	&__action-form {
-	}
-
 	&__toggle-btn {
+		padding-bottom: 0.3rem;
 		& label {
-			width: 2rem;
-			height: 0.3rem;
+			width: 2.5rem;
+			height: 0.35rem;
 			background-color: white;
 			position: absolute;
 			cursor: pointer;
@@ -106,27 +109,24 @@
 			&::before,
 			&::after {
 				content: '';
-				width: 2rem;
-				background-color: transparent;
-				position: absolute;
 				display: block;
+				position: absolute;
+				left: 0%;
+				width: 2.5rem;
+				height: 0.35rem;
+				background-color: transparent;
 				color: white;
+				transform: rotateZ(0deg);
 				transition: all 0.2s var(--animation-curve);
 			}
 			&::before {
 				top: -250%;
-				left: 0%;
-				height: 0.7rem;
 				border-top: 0.3rem solid white;
-				transform: rotateZ(0deg);
 				transform-origin: left top;
 			}
 			&::after {
 				bottom: -250%;
-				left: 0%;
-				height: 0.7rem;
 				border-bottom: 0.3rem solid white;
-				transform: rotateZ(0deg);
 				transform-origin: left bottom;
 			}
 		}
@@ -141,10 +141,13 @@
 
 		&:checked ~ label {
 			background-color: transparent;
+			width: 2.5rem;
+			padding-left: 5rem;
 
 			&::before,
 			&::after {
 				content: '';
+				width: 2.5rem;
 				border: none;
 				height: 0.2rem;
 				background-color: white;
@@ -152,16 +155,88 @@
 			}
 
 			&::before {
-				transform: rotateZ(57deg);
+				transform: rotateZ(50deg);
 			}
 
 			&::after {
-				transform: rotateZ(-57deg);
+				transform: rotateZ(-50deg);
 			}
+		}
+	}
+
+	&__sub-container {
+		width: 100%;
+		background-color: black;
+		position: absolute;
+		z-index: 1;
+		border-top: 0.1rem solid gray;
+		bottom: -21.2rem;
+		justify-content: center;
+		align-items: center;
+		padding: 3.6rem 3rem;
+	}
+
+	&__submit-btn,
+	&__sign-btn {
+		font-size: 2.5rem;
+		transition: color 0.3s;
+
+		&:hover {
+			color: gray;
+		}
+
+		&--is-mobile {
+			color: white;
+		}
+	}
+
+	&__submit-btn {
+		padding: 1.5rem 2rem;
+	}
+
+	&__sign-btn {
+		border-top: 0.1rem solid gray;
+		padding: 1.5rem;
+	}
+
+	&__search-form {
+		height: 3rem;
+		background-color: white;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: 1.5rem;
+		width: 100%;
+		margin: 1.2rem 1.5rem;
+	}
+
+	&__search-input {
+		padding: 1.5rem 1.5rem;
+		width: 100%;
+		border-radius: 0.5rem;
+		font-weight: 500;
+
+		&::placeholder {
+			font-size: 1.9rem;
+			font-weight: 500;
+			letter-spacing: 0.1rem;
+		}
+	}
+
+	&__close-btn {
+		border: 0;
+		margin-right: 1rem;
+
+		& > img {
+			height: 1.2rem;
 		}
 	}
 }
 
+.main-section {
+	.searching-subsection {
+		background-color: var(--lilac-color);
+	}
+}
+
 @media (min-width: 1200px) {
-	/* Hamburger Menu */
 }
