@@ -8,7 +8,6 @@ html {
 	box-sizing: border-box;
 	font-size: 62.5%; /* equivalent to 10px */
 	tab-size: 4;
-	word-break: break-all;
 	overflow: hidden auto;
 }
 
@@ -70,7 +69,7 @@ h6 {
 /* Enable word wrapping for paragraphs and limit the width */
 p {
 	overflow-wrap: break-word;
-	max-width: 40ch;
+	max-width: 46ch;
 }
 
 /* Remove default list styles */
