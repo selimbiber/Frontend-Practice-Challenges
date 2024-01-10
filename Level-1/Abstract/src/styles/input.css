@@ -26,6 +26,10 @@
 	cursor: pointer;
 }
 
+.link:hover {
+	text-decoration: underline;
+}
+
 .is-hidden {
 	display: none;
 }
@@ -75,10 +79,6 @@
 		position: relative;
 		padding-left: 1rem;
 		font-family: sans-serif;
-
-		&:hover {
-			text-decoration: underline;
-		}
 	}
 
 	&__buttons-container {
@@ -198,6 +198,38 @@
 	&__sign-btn {
 		border-top: 0.1rem solid gray;
 		padding: 1.5rem;
+	}
+
+	&__action-form {
+		display: none;
+		column-gap: 1.5rem;
+	}
+
+	&__action-form > .btn {
+		color: white;
+		padding: 0.5rem 2rem;
+		border-radius: 1rem;
+		transition: background-color 0.2s, color 0.2s;
+	}
+
+	&__action-form > &__submit-btn {
+		border: thin solid white;
+
+		&:hover {
+			border-color: transparent;
+			background-color: var(--purple-color);
+		}
+	}
+
+	&__action-form > &__sign-btn {
+		background-color: var(--purple-color);
+		padding: 0 3rem;
+
+		&:hover {
+			background-color: white;
+			color: var(--purple-color);
+			border: thin solid var(--purple-color);
+		}
 	}
 
 	&__search-form {
@@ -435,7 +467,7 @@
 
 @media (min-width: 768px) {
 	.container {
-		max-width: 85%;
+		max-width: 88%;
 	}
 	.main-section {
 		.searching-subsection {
@@ -488,6 +520,18 @@
 				justify-content: space-between;
 				gap: 2rem;
 			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.header-section {
+		&__action-form {
+			display: flex;
+		}
+
+		&__buttons-container {
+			display: none;
 		}
 	}
 }
