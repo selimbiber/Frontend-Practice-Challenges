@@ -274,6 +274,7 @@
 			width: 100%;
 			border-radius: 0.4rem;
 			padding-left: 1.5rem;
+			font-weight: 500;
 			transition: border-color 0.2s;
 
 			&:focus {
@@ -301,15 +302,14 @@
 	.features-subsection {
 		&__container {
 			display: flex;
-			justify-content: space-between;
 			flex-wrap: wrap;
-			gap: 9rem;
-			padding: 11rem 7rem;
+			gap: 9rem 3rem;
+			padding: 11rem 6rem 10rem;
 		}
 
 		.features-list-item {
 			column-gap: 2.8rem;
-			min-width: 35rem;
+			min-width: 37rem;
 			max-width: 80%;
 
 			&__icon {
@@ -328,6 +328,97 @@
 				color: var(--purple-color);
 				font-size: 2.3rem;
 			}
+		}
+	}
+
+	.help-btn {
+		display: flex;
+		align-items: center;
+		column-gap: 1rem;
+		position: fixed;
+		right: 2rem;
+		bottom: 1.5rem;
+		padding: 0.7em 1.3em;
+		border-radius: 2.5rem;
+		border: 0;
+		background-color: var(--purple-color);
+		color: white;
+		font-weight: bolder;
+		transition: background-color 0.2s, color 0.2s;
+
+		&:hover {
+			outline: thin solid;
+			background-color: white;
+			color: var(--purple-color);
+		}
+
+		&__question-mark {
+			height: 2rem;
+			width: 2rem;
+		}
+	}
+}
+
+.footer-section {
+	background-color: black;
+	&__container {
+		height: 100%;
+		padding: 6rem 1.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 4rem;
+	}
+
+	.lists-part {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 75%;
+		gap: 3rem;
+
+		&__wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			gap: 7rem;
+		}
+
+		&__list {
+			width: 15rem;
+			row-gap: 0.2rem;
+		}
+
+		&__title {
+			color: white;
+			margin-bottom: 1.5rem;
+			font-size: 2.5rem;
+
+			&--sub {
+				margin-top: 2.5rem;
+				margin-bottom: 0.5rem;
+				font-size: 1.7rem;
+			}
+		}
+
+		&__link {
+			color: white;
+			font-size: 1.7rem;
+		}
+	}
+
+	.copyright-part {
+		min-width: 25%;
+		align-self: flex-start;
+		&__icon {
+			height: 3.7rem;
+			width: 3.7rem;
+			margin-bottom: 1.5rem;
+		}
+
+		&__info {
+			color: white;
+			font-size: 1.8rem;
+			font-weight: 500;
 		}
 	}
 }
@@ -354,9 +445,48 @@
 		}
 
 		.features-subsection {
+			&__container {
+				padding: 17rem 6rem 10rem;
+			}
 			.features-list-item {
 				margin: 0 auto;
 				max-width: 40%;
+			}
+		}
+	}
+
+	.footer-section {
+		.lists-part {
+			margin: 0 auto;
+			&__wrapper {
+				justify-content: space-between;
+			}
+		}
+
+		.copyright-part {
+			align-self: flex-end;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.footer-section {
+		height: 40rem;
+
+		&__container {
+			flex-direction: row;
+			column-gap: 6rem;
+		}
+
+		.lists-part {
+			margin: unset;
+			gap: 2rem;
+			flex-wrap: nowrap;
+
+			&__wrapper {
+				width: unset;
+				justify-content: space-between;
+				gap: 2rem;
 			}
 		}
 	}

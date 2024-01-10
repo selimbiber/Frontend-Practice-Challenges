@@ -277,7 +277,22 @@
 					</li>
 				</ul>
 			</section>
-			<button type="button" class="help-btn btn">Help</button>
+			<button type="button" class="help-btn btn">
+				<svg
+					class="help-btn__question-mark"
+					fill="currentColor"
+					version="1.1"
+					viewBox="0 0 29.536 29.536"
+					xml:space="preserve"
+					xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="m14.768 0c-8.157 0-14.768 6.609-14.768 14.768 0 8.155 6.611 14.767 14.768 14.767s14.768-6.612 14.768-14.767c-1e-3 -8.159-6.612-14.768-14.768-14.768zm0 27.126c-6.828 0-12.361-5.532-12.361-12.359 0-6.828 5.533-12.362 12.361-12.362 6.826 0 12.359 5.535 12.359 12.362s-5.533 12.359-12.359 12.359z" />
+					<path
+						d="m14.385 19.337c-1.338 0-2.289 0.951-2.289 2.34 0 1.336 0.926 2.339 2.289 2.339 1.414 0 2.314-1.003 2.314-2.339-0.027-1.389-0.928-2.34-2.314-2.34z" />
+					<path
+						d="m14.742 6.092c-1.824 0-3.34 0.513-4.293 1.053l0.875 2.804c0.668-0.462 1.697-0.772 2.545-0.772 1.285 0.027 1.879 0.644 1.879 1.543 0 0.85-0.67 1.697-1.494 2.701-1.156 1.364-1.594 2.701-1.516 4.012l0.025 0.669h3.42v-0.463c-0.025-1.158 0.387-2.162 1.311-3.215 0.979-1.08 2.211-2.366 2.211-4.321 0-2.135-1.566-4.011-4.963-4.011z" /></svg
+				>Help
+			</button>
 			<section
 				aria-label="helper chat bot"
 				class="chatbot-subsection col is-hidden">
@@ -333,111 +348,127 @@
 		<footer class="footer-section">
 			<div class="footer-section__container container">
 				<div class="lists-part">
-					<ul class="lists-part__info-list col">
-						<li><h3 class="lists-part__title">Abstract</h3></li>
-						<li>
-							<a
-								href="https://app.abstract.com/start-branches-trial"
-								class="lists-part__link"
-								>Start Trial
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://www.abstract.com/pricing"
-								class="lists-part__link"
-								>Pricing</a
-							>
-						</li>
-						<li>
-							<a
-								href="https://app.abstract.com/download"
-								class="lists-part__link"
-								>Download</a
-							>
-						</li>
-					</ul>
-					<ul class="lists-part__info-list col">
-						<li><h3 class="lists-part__title">Resources</h3></li>
-						<li>
-							<a href="https://www.abstract.com/blog" class="lists-part__link"
-								>Blog</a
-							>
-						</li>
-						<li>
-							<a href="https://www.abstract.com/help" class="lists-part__link"
-								>Help Center</a
-							>
-						</li>
-						<li>
-							<a
-								href="https://www.abstract.com/release-notes"
-								class="lists-part__link"
-								>Release Notes</a
-							>
-						</li>
-						<li>
-							<a href="https://status.abstract.com/" class="lists-part__link"
-								>Status</a
-							>
-						</li>
-					</ul>
-					<ul class="lists-part__info-list col">
-						<li><h3 class="lists-part__title">Community</h3></li>
-						<li>
-							<a href="https://twitter.com/goabstract" class="lists-part__link"
-								>Twitter</a
-							>
-						</li>
-						<li>
-							<a
-								href="https://www.linkedin.com/company/17950473/"
-								class="lists-part__link"
-								>LinkedIn</a
-							>
-						</li>
-						<li>
-							<a href="https://facebook.com/Abstract/" class="lists-part__link"
-								>Facebook</a
-							>
-						</li>
-						<li>
-							<a href="https://dribbble.com/abstract" class="lists-part__link"
-								>Dribbble</a
-							>
-						</li>
-						<li>
-							<a
-								href="https://www.abstract.com/podcast"
-								class="lists-part__link"
-								>Podcast</a
-							>
-						</li>
-					</ul>
-					<ul class="lists-part__info-list col">
-						<li><h3 class="lists-part__title">Company</h3></li>
-						<li>
-							<a href="https://www.abstract.com/about" class="lists-part__link"
-								>About Us</a
-							>
-						</li>
-						<li>
-							<a href="https://abstract.breezy.hr/" class="lists-part__link"
-								>Careers</a
-							>
-						</li>
-						<li>
-							<a href="https://www.abstract.com/legal" class="lists-part__link"
-								>Legal</a
-							>
-						</li>
-					</ul>
-					<ul class="lists-part__info-list col">
-						<li>
-							<h4 class="lists-part__title--sub">Contact Us</h4>
-						</li>
-						<li><a href="mailto:info@abstract.com">info@abstract.com</a></li>
-					</ul>
+					<div class="lists-part__wrapper">
+						<ul class="lists-part__list col">
+							<li><h3 class="lists-part__title">Abstract</h3></li>
+							<li>
+								<a
+									href="https://app.abstract.com/start-branches-trial"
+									class="lists-part__link"
+									>Start Trial
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://www.abstract.com/pricing"
+									class="lists-part__link"
+									>Pricing</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://app.abstract.com/download"
+									class="lists-part__link"
+									>Download</a
+								>
+							</li>
+						</ul>
+						<ul class="lists-part__list col">
+							<li><h3 class="lists-part__title">Resources</h3></li>
+							<li>
+								<a href="https://www.abstract.com/blog" class="lists-part__link"
+									>Blog</a
+								>
+							</li>
+							<li>
+								<a href="https://www.abstract.com/help" class="lists-part__link"
+									>Help Center</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.abstract.com/release-notes"
+									class="lists-part__link"
+									>Release Notes</a
+								>
+							</li>
+							<li>
+								<a href="https://status.abstract.com/" class="lists-part__link"
+									>Status</a
+								>
+							</li>
+						</ul>
+					</div>
+					<div class="lists-part__wrapper">
+						<ul class="lists-part__list col">
+							<li><h3 class="lists-part__title">Community</h3></li>
+							<li>
+								<a
+									href="https://twitter.com/goabstract"
+									class="lists-part__link"
+									>Twitter</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.linkedin.com/company/17950473/"
+									class="lists-part__link"
+									>LinkedIn</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://facebook.com/Abstract/"
+									class="lists-part__link"
+									>Facebook</a
+								>
+							</li>
+							<li>
+								<a href="https://dribbble.com/abstract" class="lists-part__link"
+									>Dribbble</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.abstract.com/podcast"
+									class="lists-part__link"
+									>Podcast</a
+								>
+							</li>
+						</ul>
+						<ul class="lists-part__list col">
+							<li><h3 class="lists-part__title">Company</h3></li>
+							<li>
+								<a
+									href="https://www.abstract.com/about"
+									class="lists-part__link"
+									>About Us</a
+								>
+							</li>
+							<li>
+								<a href="https://abstract.breezy.hr/" class="lists-part__link"
+									>Careers</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.abstract.com/legal"
+									class="lists-part__link"
+									>Legal</a
+								>
+							</li>
+							<li>
+								<h4 class="lists-part__title lists-part__title--sub">
+									Contact Us
+								</h4>
+							</li>
+							<li>
+								<a href="mailto:info@abstract.com" class="lists-part__link"
+									>info@abstract.com</a
+								>
+							</li>
+						</ul>
+					</div>
 				</div>
 				<article class="copyright-part col">
 					<svg
