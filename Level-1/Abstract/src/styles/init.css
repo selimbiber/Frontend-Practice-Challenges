@@ -1,4 +1,5 @@
-Apply isolation property to root and next elements #root,
+/* Apply isolation property to root and next elements  */
+#root,
 #__next {
 	isolation: isolate;
 }
